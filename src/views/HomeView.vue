@@ -35,7 +35,6 @@ export default {
        this.postsLimit += 3
        this.posts = []
        this.limitedPosts()
-       console.log(this.posts)
     }
   },
   created(){
