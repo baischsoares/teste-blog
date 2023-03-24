@@ -1,6 +1,9 @@
 <template>
   <h1>Postagens</h1>
-  <p>{{ posts }}</p>
+  <button @click.prevent="loadMorePosts" >Carregar mais</button>
+   <div v-for="(post, index) in posts" :key="index">
+      <p>{{ post }}</p>
+  </div> 
 </template>
 
 <script>
@@ -9,7 +12,8 @@ export default {
   name: 'HomeView',
   data(){
     return{
-      posts: {}
+      posts: [],
+      postsLimit: 5
     }
   },
 
@@ -19,15 +23,23 @@ export default {
       .then((response) => response.json())
       .then((data) => {
         this.$store.dispatch('changePosts', data)
+        this.limitedPosts()
       });
     },
-    importPosts(){
-      this.posts = this.$store.state.posts
+    limitedPosts(){
+      for (let i = 0; i < this.postsLimit; i++){
+        this.posts.push(this.$store.state.posts[i])
+      }
+    },
+     loadMorePosts(){
+       this.postsLimit += 3
+       this.posts = []
+       this.limitedPosts()
+       console.log(this.posts)
     }
   },
   created(){
     this.fetchPosts();
-    this.importPosts();
   }
 }
 </script>
