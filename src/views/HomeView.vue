@@ -1,15 +1,33 @@
 <template>
   <h1>Postagens</h1>
+  <p>{{ posts }}</p>
 </template>
 
 <script>
-// @ is an alias to /src
-
 
 export default {
   name: 'HomeView',
-  components: {
- 
+  data(){
+    return{
+      posts: {}
+    }
+  },
+
+  methods: {
+    fetchPosts(){
+      fetch(`https://jsonplaceholder.typicode.com/posts`)
+      .then((response) => response.json())
+      .then((data) => {
+        this.$store.dispatch('changePosts', data)
+      });
+    },
+    importPosts(){
+      this.posts = this.$store.state.posts
+    }
+  },
+  created(){
+    this.fetchPosts();
+    this.importPosts();
   }
 }
 </script>
