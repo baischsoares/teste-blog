@@ -20,6 +20,6 @@ h2, p, button{
 }
 #container{
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
 }
 </style>
