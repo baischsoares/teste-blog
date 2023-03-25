@@ -1,16 +1,16 @@
 <template>
 
   <h1>Postagens</h1>
-  <button @click.prevent="loadMorePosts" >Carregar mais</button>
   <div v-for="(post, index) in posts" :key="index">
       <PostItem :post="post">
-        <button @click="getComments(post.id)">Ver Comentários</button>
+        <button @click="getComments(post.id)" class="btn-see-comments">Ver Comentários</button>
       </PostItem>
   </div> 
+  <button @click.prevent="loadMorePosts" >Carregar mais</button>
 
     <div class="modal-comments" v-if="comments">
       <div class="modal-container">
-        <button v-if="comments" @click="comments = []">X</button>
+        <button @click="comments = []">X</button>
         <ModalComments v-for="(comment, index) in comments" :key="index" :comment="comment"/>
       </div>
     </div>
@@ -71,3 +71,16 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1{
+  font-size: 2rem;
+}
+.btn-see-comments{
+  padding: 5px 15px;
+  border: none;
+  background: #84b295;
+  cursor: pointer;
+  color: #ffffff;
+  justify-self: end;
+}
+</style>
