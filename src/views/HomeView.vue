@@ -2,21 +2,27 @@
   <h1>Postagens</h1>
   <button @click.prevent="loadMorePosts" >Carregar mais</button>
    <div v-for="(post, index) in posts" :key="index">
-      <p>{{ post }}</p>
+      <PostItem :post="post">
+        <button >Ver Comentários</button>
+      </PostItem>
   </div> 
 </template>
 
 <script>
+import PostItem from '@/components/PostItem.vue'
 
 export default {
   name: 'HomeView',
+  components:{
+    PostItem
+  },
   data(){
     return{
       posts: [],
-      postsLimit: 5
+      postsLimit: 5,
+      comments: []
     }
   },
-
   methods: {
     fetchPosts(){
       fetch(`https://jsonplaceholder.typicode.com/posts`)
@@ -35,8 +41,8 @@ export default {
        this.postsLimit += 3
        this.posts = []
        this.limitedPosts()
-       console.log(this.posts)
-    }
+    },
+
   },
   created(){
     this.fetchPosts();
