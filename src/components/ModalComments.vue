@@ -1,15 +1,15 @@
 <template>
-  <div class="hello">
-  <h2>{{post.title}}</h2>
-  <p>{{ post.body }}</p>
-  <slot></slot>
+  <div>
+  <p>{{comment.body}}</p>
+  <p>{{comment.email }}</p>
+  <p>{{ comment.name }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PostItem',
-  props: ['post'],
+  name: 'ModalComments',
+  props: ['comment'],
   data(){
   },
 }
