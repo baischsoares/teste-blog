@@ -97,9 +97,9 @@ h1{
     display: block;
 }
 .modal-comments{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  position:fixed;
   top: 0;
   left: 0;
   background: rgba(0,0,0,.2);
@@ -111,7 +111,7 @@ h1{
   background: #fff;
   max-width: 500px;
   padding: 20px;
-   position: relative;
+  position: relative;
 }
 .comments-section{
   height: 300px;
@@ -134,5 +134,11 @@ h2{
   color: #fff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media (max-width: 720px){
+  .modal-container{
+    margin: 0px 10px;
+  }
 }
 </style>
