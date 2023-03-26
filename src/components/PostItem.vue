@@ -1,8 +1,8 @@
 <template>
-  <div class="hello">
-  <h2>{{post.title}}</h2>
-  <p>{{ post.body }}</p>
-  <slot></slot>
+  <div class="post-item">
+    <h2>{{post.title}}</h2>
+    <p>{{ post.body }}</p>
+    <slot></slot>
   </div>
 </template>
 
@@ -17,18 +17,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.post-item{
+  padding: 20px 0px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eccf8d;
+  display: grid;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.post-item h2{
+  text-transform: capitalize;
+  margin-bottom: 20px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.post-item p{
+  text-transform: capitalize;
+  margin-bottom: 20px;
 }
-a {
-  color: #42b983;
-}
+
 </style>

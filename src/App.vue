@@ -1,33 +1,25 @@
 <template>
-  <router-view/>
+  <section id="container">
+    <router-view/>
+  </section>
 </template>
+
 <script>
 export default {
   name: 'App',
- 
 }
 </script>
 
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  font-family: monospace ;
 }
-
-nav {
-  padding: 30px;
+h2, p, button{
+  margin: 0px;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+#container{
+  max-width: 800px;
+  margin: 0 auto 100px auto;
 }
 </style>

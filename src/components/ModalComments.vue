@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="comment-block">
   <p>{{comment.body}}</p>
-  <p>{{comment.email }}</p>
-  <p>{{ comment.name }}</p>
+  <span>Email: {{comment.email }}</span>
+  <span>Name: {{ comment.name }}</span>
   </div>
 </template>
 
@@ -17,18 +17,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.comment-block{
+  padding: 10px 0px;
+  border-bottom: 1px solid #eccf8d;;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+p{
+  margin-bottom: 5px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+span{
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 </style>
