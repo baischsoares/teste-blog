@@ -31,7 +31,5 @@ export default {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
-slot{
-  justify-self: flex-end;
-}
+
 </style>
