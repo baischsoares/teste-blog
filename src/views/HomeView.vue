@@ -111,7 +111,7 @@ h1{
   background: #fff;
   max-width: 500px;
   padding: 20px;
-   position: relative;
+  position: relative;
 }
 .comments-section{
   height: 300px;
@@ -134,5 +134,11 @@ h2{
   color: #fff;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media (max-width: 720px){
+  .modal-container{
+    margin: 0px 10px;
+  }
 }
 </style>
