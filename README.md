@@ -1,24 +1,31 @@
 # teste-blog
 
-## Project setup
+Este é um projeto de blog. Ele realiza a listagem de postagens, com possibilidade para se carregar mais posts e tembém fornece os comentários para cada uma das postagens.
+
+O projeto foi desenvolvido como prova técnica dentro de um processo seletivo.
+
+A tecnologia usada aqui foi o Vue.js 3.
+
+## Para instalar o projeto
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Para compliar e fazer hot-reloads
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Para compilar e minificar para produção
+
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Para corrigir arquivos
+
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
