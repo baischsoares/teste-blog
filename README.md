@@ -4,28 +4,38 @@ Este é um projeto de blog. Ele realiza a listagem de postagens, com possibilida
 
 O projeto foi desenvolvido como prova técnica dentro de um processo seletivo.
 
-A tecnologia usada aqui foi o Vue.js 3.
+Para acessar o projeto: https://teste-36f69.web.app/
 
-## Para instalar o projeto
+## Tecnologias usadas
+
+# Vue.js
+
+# Vue Router
+
+# Vuex
+
+## Para clonar o projeto
+
+1. Faça o clone do repositório
+
+```
+git clone git@github.com:baischsoares/teste-blog.git
+```
+
+2. Instale os pacotes NPM
 
 ```
 npm install
 ```
 
-### Para compliar e fazer hot-reloads
+3. Rode o projeto em sua máquina
 
 ```
 npm run serve
 ```
 
-### Para compilar e minificar para produção
+4. Caso queria compilar o projeto
 
 ```
 npm run build
-```
-
-### Para corrigir arquivos
-
-```
-npm run lint
 ```
