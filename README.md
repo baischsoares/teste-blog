@@ -1,4 +1,4 @@
-# teste-blog
+# Sobre o projeto
 
 Este é um projeto de blog. Ele realiza a listagem de postagens, com possibilidade para se carregar mais posts e tembém fornece os comentários para cada uma das postagens.
 
