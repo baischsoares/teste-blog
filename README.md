@@ -8,11 +8,11 @@ Para acessar o projeto: https://teste-36f69.web.app/
 
 ## Tecnologias usadas
 
-# Vue.js
+### Vue.js
 
-# Vue Router
+### Vue Router
 
-# Vuex
+### Vuex
 
 ## Para clonar o projeto
 
